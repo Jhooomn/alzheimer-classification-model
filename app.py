@@ -4,7 +4,7 @@ import joblib
 app = Flask(__name__)
 
 
-@app.route('/has-alzheimer')
+@app.route('/has-alzheimer', methods=["POST"])
 def has_alzheimer():
     if request.data:
         json_string = request.get_json()
@@ -14,6 +14,11 @@ def has_alzheimer():
             return jsonify('probably has alzheimer')
         else:
             return jsonify('probably has not alzheimer')
+
+
+@app.route('/hi')
+def has_alzheimer():
+    return jsonify("Hi!")
 
 
 if __name__ == '__main__':
