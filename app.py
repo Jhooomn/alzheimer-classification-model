@@ -16,5 +16,10 @@ def has_alzheimer():
             return jsonify('probably has not alzheimer')
 
 
+@app.route('/hi')
+def has_alzheimer():
+    return jsonify("Hi!")
+
+
 if __name__ == '__main__':
     app.run()
